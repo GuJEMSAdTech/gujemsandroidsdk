@@ -36,6 +36,11 @@ public interface IVideoPlayer {
          * Called when an error occurs during video playback.
          */
         void onError();
+
+        /**
+         * Called when the currently loaded video will be progressed to the given position (milliseconds).
+         */
+        void onSeekTo(int videoPosition);
     }
 
     /**

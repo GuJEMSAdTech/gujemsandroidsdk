@@ -263,6 +263,10 @@ public class GuJEMSVideoPlayer extends RelativeLayout {
 			}
 
 			@Override
+			public void onSeekTo(int videoPosition) {
+			}
+
+			@Override
 			public void onCompleted() {
 				if (mIsAdDisplayed) {
 					for (VideoAdPlayer.VideoAdPlayerCallback callback : mAdCallbacks) {
