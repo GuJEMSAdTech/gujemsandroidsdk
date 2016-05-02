@@ -148,6 +148,16 @@ public class GuJEMSVideoView extends VideoView implements IVideoPlayer {
     }
 
     @Override
+    public void seekTo(int msec) {
+        for (PlayerCallback callback : mVideoPlayerCallbacks) {
+            callback.onSeekTo(msec);
+        }
+        //Call super at the end because in most cases the listener wants to capture the current position
+        //before the seekTo method is executed, to calculate the delta to detect direction (backward / forward).
+        super.seekTo(msec);
+    }
+
+    @Override
     public void disablePlaybackControls() {
         setMediaController(null);
     }
