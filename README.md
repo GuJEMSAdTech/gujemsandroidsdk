@@ -1,6 +1,6 @@
 ﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.2.0**
+**Latest Version 2.2.1**
 
 ## Requirements
 
@@ -15,6 +15,7 @@ Language Support: **Java**
 ## New Features since 2.1.91
 
 - Smartclip removed
+- setNonPersonalizedAdsStatus
 
 ## Installation
 
@@ -38,6 +39,12 @@ dependencies {
        [...]
 }
 ```
+
+## Options
+
+The SdkUtil instance provides global options for the sdk:
+
+-NonPersonalizedAdsStatus with setNonPersonalizedAdsStatus method
 
 ## Usage
 If you are interested in upgrading the SDK please move forward to Chapter "Upgrading from v1.4.x to v2.1.x".

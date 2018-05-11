@@ -62,6 +62,8 @@ public class SdkUtil {
     private final static Class<?>[] KITKAT_JS_PARAMTYPES = new Class[]{
             String.class, ValueCallback.class};
 
+    private static boolean NPA_STATUS = false;
+
     /**
      * major sdk version integer
      */
@@ -91,6 +93,14 @@ public class SdkUtil {
             + MINOR_VERSION + "_" + REV_VERSION;
 
     private static WindowManager WINDOW_MANAGER = null;
+
+    public static void setNonPersonalizedAdsStatus(boolean status) {
+        NPA_STATUS = status;
+    }
+
+    public static boolean getNonPersonalizedAdsStatus() {
+        return NPA_STATUS;
+    }
 
     /**
      * Helper method to determine the correct way to execute javascript in a

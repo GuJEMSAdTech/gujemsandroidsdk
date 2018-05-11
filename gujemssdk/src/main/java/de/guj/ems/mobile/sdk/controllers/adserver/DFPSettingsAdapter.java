@@ -6,6 +6,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.util.AttributeSet;
 
+import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest.Builder;
 
@@ -127,6 +128,11 @@ public class DFPSettingsAdapter extends AdServerSettingsAdapter {
 
         Iterator<String> cvI = customValues.keySet().iterator();
         Builder adRequestBuilder = new PublisherAdRequest.Builder();
+        if (SdkUtil.getNonPersonalizedAdsStatus()) {
+            Bundle extras = new Bundle();
+            extras.putString("npa", "1");
+            adRequestBuilder = adRequestBuilder.addNetworkExtrasBundle(AdMobAdapter.class, extras);
+        }
         while (cvI.hasNext()) {
             String key = cvI.next();
             String val = customValues.get(key);

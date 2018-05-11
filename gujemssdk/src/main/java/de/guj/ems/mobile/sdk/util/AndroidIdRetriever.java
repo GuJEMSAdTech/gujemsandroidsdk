@@ -38,7 +38,7 @@ public class AndroidIdRetriever {
                 AdvertisingIdClient.Info idInfo = null;
                 try {
                     idInfo = AdvertisingIdClient.getAdvertisingIdInfo(SdkUtil.getContext());
-                    androidId = idInfo.getId();
+                    androidId = SdkUtil.getNonPersonalizedAdsStatus() ? "" : idInfo.getId();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
