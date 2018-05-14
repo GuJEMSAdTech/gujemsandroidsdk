@@ -46,7 +46,7 @@ The SdkUtil instance provides global options for the sdk:
 
 -NonPersonalizedAdsStatus with setNonPersonalizedAdsStatus method
 
-In case of users opting out of personalized ads served by G+J e|MS, please set SdkUtil.setNonPersonalizedAdsStatus(true).
+In case of users opting out of personalized ads served by G+J e|MS, please set SdkUtil.setNonPersonalizedAdsStatus(true) on every app view.
 
 ## Usage
 If you are interested in upgrading the SDK please move forward to Chapter "Upgrading from v1.4.x to v2.1.x".
