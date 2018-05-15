@@ -1,6 +1,6 @@
-# gujemsandroidsdk
+﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.2.1**
+**Latest Version 2.2.2**
 
 ## Requirements
 
@@ -45,8 +45,6 @@ dependencies {
 The SdkUtil instance provides global options for the sdk:
 
 -NonPersonalizedAdsStatus with setNonPersonalizedAdsStatus method
-
-In case of users opting out of personalized ads served by G+J e|MS, please set SdkUtil.setNonPersonalizedAdsStatus(true) on every app view.
 
 ## Usage
 If you are interested in upgrading the SDK please move forward to Chapter "Upgrading from v1.4.x to v2.1.x".
@@ -162,7 +160,7 @@ gujView.setOnAdResizeListener(new IOnAdResizeListener() {
 
 
 
-#### YieldLab Banner Ad Integration
+#####YieldLab Banner Ad Integration
 
 If you want to use YieldLab with your banner ad's, you have to add following initialisation as early as
 possible in your app. Following YieldLab Ids are only examples and have to be changed.
