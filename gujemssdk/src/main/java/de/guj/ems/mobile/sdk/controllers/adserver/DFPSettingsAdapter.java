@@ -131,6 +131,9 @@ public class DFPSettingsAdapter extends AdServerSettingsAdapter {
         if (SdkUtil.getNonPersonalizedAdsStatus()) {
             Bundle extras = new Bundle();
             extras.putString("npa", "1");
+            if (SdkUtil.getIsChildStatus()) {
+                extras.putBoolean("tag_for_under_age_of_consent", true);
+            }
             adRequestBuilder = adRequestBuilder.addNetworkExtrasBundle(AdMobAdapter.class, extras);
         }
         while (cvI.hasNext()) {

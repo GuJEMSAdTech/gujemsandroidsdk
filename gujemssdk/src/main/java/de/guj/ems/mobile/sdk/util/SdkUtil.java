@@ -63,6 +63,7 @@ public class SdkUtil {
             String.class, ValueCallback.class};
 
     private static boolean NPA_STATUS = false;
+    private static boolean IS_CHILD = false;
 
     /**
      * major sdk version integer
@@ -94,12 +95,17 @@ public class SdkUtil {
 
     private static WindowManager WINDOW_MANAGER = null;
 
-    public static void setNonPersonalizedAdsStatus(boolean status) {
+    public static void setNonPersonalizedAdsStatus(boolean status, boolean isChild) {
         NPA_STATUS = status;
+        IS_CHILD = isChild;
     }
 
     public static boolean getNonPersonalizedAdsStatus() {
-        return NPA_STATUS;
+        return NPA_STATUS || IS_CHILD;
+    }
+
+    public static boolean getIsChildStatus() {
+        return IS_CHILD;
     }
 
     /**

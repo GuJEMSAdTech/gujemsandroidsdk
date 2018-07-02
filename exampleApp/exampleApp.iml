@@ -85,16 +85,11 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.2.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/design/25.2.0/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.2.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/transition/25.2.0/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.facebook.android/audience-network-sdk/4.28.1/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.facebook.android/audience-network-sdk/4.99.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer-core/r2.4.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer-dash/r2.4.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/11.0.2/jars" />
@@ -133,14 +128,13 @@
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="com.google.android.gms:play-services-gass-11.0.2" level="project" />
+    <orderEntry type="library" exported="" name="com.facebook.android:audience-network-sdk-4.99.0" level="project" />
     <orderEntry type="library" exported="" name="com.google.android.gms:play-services-safetynet-11.0.2" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:animated-vector-drawable-25.2.0" level="project" />
-    <orderEntry type="library" exported="" name="com.facebook.android:audience-network-sdk-4.28.1" level="project" />
     <orderEntry type="library" exported="" name="com.google.android.gms:play-services-ads-lite-11.0.2" level="project" />
     <orderEntry type="library" exported="" name="com.google.android.gms:play-services-clearcut-11.0.2" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:design-25.2.0" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:appcompat-v7-25.2.0" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-core-ui-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-compat-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:transition-25.2.0" level="project" />
     <orderEntry type="library" exported="" name="com.google.android.gms:play-services-basement-11.0.2" level="project" />
@@ -149,13 +143,8 @@
     <orderEntry type="library" exported="" name="com.google.android.gms:play-services-tasks-11.0.2" level="project" />
     <orderEntry type="library" exported="" name="com.google.android.exoplayer:exoplayer-core-r2.4.2" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-core-utils-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-v4-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="com.google.android.gms:play-services-base-11.0.2" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:recyclerview-v7-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-fragment-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-vector-drawable-25.2.0" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-annotations:25.3.1@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-media-compat-25.3.1" level="project" />
     <orderEntry type="module" module-name="gujemssdk" exported="" />
     <orderEntry type="library" exported="" name="android-android-25" level="project" />
   </component>
