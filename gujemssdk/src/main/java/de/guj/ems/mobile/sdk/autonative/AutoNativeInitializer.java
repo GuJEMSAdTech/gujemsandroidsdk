@@ -62,7 +62,14 @@ class AutoNativeInitializer {
                 try {
                     clickUrlServer += URLEncoder.encode(clickURL, "utf-8");
                     SdkLog.i(TAG, "encoded clickURL: " + clickUrlServer);
-                    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(clickUrlServer)));
+                    if (this.config.getBrowser() != null) {
+                        this.config.getBrowser().clickedOnTeaser(
+                                clickUrlServer, clickURL,
+                                autonativeFieldValueMap.get("SpecialAdUnit"),
+                                autonativeFieldValueMap.get("ArticleId"));
+                    } else {
+                        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(clickUrlServer)));
+                    }
                 } catch (Exception e) {
                     SdkLog.e(TAG, "could not encode clickurl", e);
                 }

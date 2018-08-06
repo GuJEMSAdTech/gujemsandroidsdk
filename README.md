@@ -1,6 +1,6 @@
 ﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.2.2**
+**Latest Version 2.2.4**
 
 ## Requirements
 
@@ -555,6 +555,8 @@ three AutoNative ads are present on one "page/view", the first ad gets the Tile 
 and the third 3. The tile number is used to prevent multiple instances of the same ad.
 5. Correlator: long random number. indicates a correlation of ad calls. Every sequence of related AutoNative ad calls
 (on the same page) should have the same correlator. You can use our convenience method SdkUtil.getCorrelator().
+6. **(optional)** Browser (Instance of AutoNativeCustomBrowser): Will be called, when an user clicks on a native Teaser.
+Can be used to open the click in a custom webview or an internal browser. The parameters special and articleId from the callback can be ignored.
 
 The last step to get a working AutoNative ad is to instantiate the AutoNativeTaskInitializer. This
 object expects the **AutoNativeConfig**, the context and the view which contains the 

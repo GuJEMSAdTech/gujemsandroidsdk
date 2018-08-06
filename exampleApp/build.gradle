@@ -20,6 +20,7 @@ android {
 
 dependencies {
     compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:support-v4:26.1.0'
     compile 'com.facebook.android:audience-network-sdk:4.+'
     compile project(':gujemssdk')
 }
