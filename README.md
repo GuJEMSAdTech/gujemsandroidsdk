@@ -14,7 +14,7 @@ Language Support: **Java**
 
 ## New Features since 2.1.91
 
-- Smartclip removed
+- Smartclip removed (Since 2.2.2)
 - setNonPersonalizedAdsStatus
 
 ## Installation
