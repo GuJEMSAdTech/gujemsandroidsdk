@@ -1,6 +1,6 @@
 ﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.2.4**
+**Latest Version 2.2.9**
 
 ## Requirements
 
@@ -547,7 +547,7 @@ is an asynchronous operation. The code for this process looks like this:
 First you have to set the base URL for your app. This is important for the click url, which leads
 the user to the linked article. After that you have to create an AutoNativeConfig object. This configuration
 expects five arguments.
-1. TeaserAspectRatio: possible formats are 1:1, 2:1, 2:3.
+1. TeaserAspectRatio: possible formats are 1:1, 2:1, 3:2.
 2. AdUnitId which is able to deliver AutoNative ads.
 3. Position: Ad position 
 4. Tile: number to indicate consecutive AutoNative ads within one "page/view". If for example

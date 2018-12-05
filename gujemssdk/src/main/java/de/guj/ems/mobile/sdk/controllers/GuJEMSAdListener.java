@@ -110,6 +110,10 @@ public class GuJEMSAdListener extends AdListener {
         if (this.adView != null) {
             SdkLog.i(TAG, logPrefix + " request finished.");
             this.adView.setVisibility(View.VISIBLE);
+/*            this.adView.setAdSession(OmidSdk.getInstance().createAdSession(this.adView));
+            if (this.adView.getAdSession() != null) {
+                OmidSdk.getInstance().impressionOccurred(this.adView.getAdSession());
+            }*/
         }
         onAdSuccess();
         super.onAdLoaded();

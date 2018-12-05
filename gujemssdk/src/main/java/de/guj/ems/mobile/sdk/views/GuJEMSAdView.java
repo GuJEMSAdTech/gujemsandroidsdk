@@ -16,11 +16,14 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.doubleclick.AppEventListener;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest.Builder;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
+import com.iab.omid.library.emsgujde.adsession.AdSession;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 import de.guj.ems.mobile.sdk.R;
@@ -44,6 +47,7 @@ import de.guj.ems.mobile.sdk.util.SdkUtil;
 public class GuJEMSAdView extends LinearLayout implements AppEventListener {
 
     private PublisherAdView adView;
+    private AdSession adSession;
 
     private IAdServerSettingsAdapter settings;
 
@@ -229,6 +233,14 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
         if (load) {
             this.load();
         }
+    }
+
+    public void setAdSession(AdSession adSession) {
+        this.adSession = adSession;
+    }
+
+    public AdSession getAdSession() {
+        return this.adSession;
     }
 
     public ViewGroup.LayoutParams getNewLayoutParams(int w, int h) {
@@ -425,6 +437,12 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
                         + " removing accepted sizes: 728x90, 768x90");
                 adSizes[2] = adSizes[1] = new AdSize(1, 1);
             }
+            if(SdkUtil.getUseDebuggingAdSize()) {
+                ArrayList<AdSize> list = new ArrayList<AdSize>();
+                list.addAll(Arrays.asList(adSizes));
+                list.add(new AdSize(200,446));
+                adSizes = list.toArray(new AdSize[list.size()]);
+            }
             adView.setAdSizes(adSizes);
         } else {
             AdSize[] adSizes = {AdSize.BANNER, //0
@@ -473,6 +491,12 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
                 SdkLog.d(TAG, settings.hashCode()
                         + " removing accepted sizes: 728x90, 768x90");
                 adSizes[4] = adSizes[5] = new AdSize(1, 1);
+            }
+            if(SdkUtil.getUseDebuggingAdSize()) {
+                ArrayList<AdSize> list = new ArrayList<AdSize>();
+                list.addAll(Arrays.asList(adSizes));
+                list.add(new AdSize(200,446));
+                adSizes = list.toArray(new AdSize[list.size()]);
             }
             adView.setAdSizes(adSizes);
         }

@@ -60,7 +60,7 @@ class AutoNativeTaskExecutor extends AsyncTask<Object, Object, Map<String, Strin
     private URL buildUrl() {
         URL url = null;
         try {
-            String urlTemplate = "https://pubads.g.doubleclick.net/gampad/adx?iu={0}&sz=200x200&t=pos%3D{1}%26adtype%3Dtest_philipp&m=text/xml&tile={2}&c={3}&dpt=1";
+            String urlTemplate = "https://pubads.g.doubleclick.net/gampad/adx?iu={0}&sz=200x200&t=pos%3D{1}&m=text/xml&tile={2}&c={3}&dpt=1";
             Object[] urlValues = new Object[]
                     {
                             this.config.getAdUnit(),

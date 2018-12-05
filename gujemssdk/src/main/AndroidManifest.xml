@@ -45,6 +45,10 @@
     <application>
 
         <!-- Google Ad SDK -->
+        <meta-data
+            android:name="com.google.android.gms.ads.6032"
+            android:value="true"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />

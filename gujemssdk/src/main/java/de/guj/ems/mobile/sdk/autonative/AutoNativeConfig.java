@@ -9,7 +9,7 @@ public class AutoNativeConfig {
     public enum TeaserAspectRatio {
         OneToOne("11"),
         TwoToOne("12"),
-        TwoToThree("13");
+        ThreeToTwo("13");
 
         private final String teaserAspectRatioDescription;
 

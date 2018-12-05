@@ -116,7 +116,6 @@ class YieldLabElement {
 
     public HashMap<String, String> getDataForCall() {
         HashMap<String, String> map = new HashMap<>();
-
         String position = null;
         for (Map.Entry<String, String> hashMap : this.map.entrySet()) {
             if (hashMap.getValue().equals(String.valueOf(this.id))) {
@@ -127,20 +126,7 @@ class YieldLabElement {
         if (position != null) {
             if (this.ylid != 0) {
                 map.put("ylid" + position + "c", String.valueOf(this.ylid));
-                String price = "";
-                String[] priceData = this.price.split(",");
-                if (priceData.length < 1) {
-                    priceData[0] = "";
-                }
-                if (priceData.length < 2) {
-                    priceData[1] = "";
-                }
-                if (this.ylid == 3) {
-                    price = priceData[0] + "," + priceData[1];
-                } else {
-                    price = priceData[1];
-                }
-                map.put("ylp" + position, price);
+                map.put("ylp" + position, this.price);
             } else {
                 map.put("ylid" + position, String.valueOf(this.id));
             }
