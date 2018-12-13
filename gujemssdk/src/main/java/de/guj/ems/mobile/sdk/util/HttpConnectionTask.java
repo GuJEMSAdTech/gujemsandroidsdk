@@ -87,7 +87,7 @@ public class HttpConnectionTask extends AsyncTask<String, String, String> {
             reader.close();
             conn.disconnect();
             if (responseCode == HttpURLConnection.HTTP_OK) {
-                SdkLog.e(TAG, "Successfully sent httpRequest");
+                SdkLog.i(TAG, "Successfully sent httpRequest");
             } else {
                 SdkLog.e(TAG, "Error returned from httpRequest");
             }

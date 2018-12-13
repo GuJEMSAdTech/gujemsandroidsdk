@@ -81,10 +81,17 @@ public class YieldLab extends HttpConnectionTask implements HttpOnTaskCompleted 
                     String partner = "";
                     ylId = element.getLong("c.ylid");
                     partner = element.getString("c.partner");
+                    String price = "";
+                    // skip price if not in result
+                    try {
+                        price = element.getString("price");
+                    } catch (Exception priceEx) {
+                        SdkLog.i(TAG, "Yieldlab price not found");
+                    }
                     elements.add(new YieldLabElement(
                             element.getLong("id"),
                             ylId,
-                            element.getString("price"),
+                            price,
                             partner,
                             element.getString("pvid"),
                             this.hashMap

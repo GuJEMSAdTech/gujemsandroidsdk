@@ -1,6 +1,6 @@
 ﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.2.9**
+**Latest Version 2.3.0**
 
 ## Requirements
 
@@ -35,7 +35,7 @@ allprojects {
 
 ```
 dependencies {
-       compile 'com.gujems.android:gujemssdk:2.2.0'
+       compile 'com.gujems.android:gujemssdk:2.3.0'
        [...]
 }
 ```
