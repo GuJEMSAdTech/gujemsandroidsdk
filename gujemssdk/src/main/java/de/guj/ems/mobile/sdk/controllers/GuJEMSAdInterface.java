@@ -148,6 +148,21 @@ public class GuJEMSAdInterface {
             case "log":
                 SdkLog.i(TAG, "Custom log message from ad received:\n" + info);
                 break;
+            case "creativeId":
+                SdkLog.i(TAG, "AdRequest Info creativeId: " + info);
+                break;
+            case "lineItemId":
+                SdkLog.i(TAG, "AdRequest Info lineItemId: " + info);
+                break;
+            case "slot":
+                SdkLog.i(TAG, "AdRequest Info slot: " + info);
+                break;
+            case "adunit":
+                SdkLog.i(TAG, "AdRequest Info adunit: " + info);
+                break;
+            case "requestedAdSizes":
+                SdkLog.i(TAG, "AdRequest Info requestedAdSizes: " + info);
+                break;
             default:
         }
     }

@@ -44,11 +44,13 @@ public class YieldLab extends HttpConnectionTask implements HttpOnTaskCompleted 
         if (!elements.isEmpty()) {
             for (int i = 0; i < elements.size(); i++) {
                 for (Map.Entry<String, String> entry : elements.get(i).getDataForCall().entrySet()) {
+                    SdkLog.i(TAG, "append to adcall. key: " + entry.getKey() + " value: " + entry.getValue());
                     request.addCustomTargeting(entry.getKey(), entry.getValue());
                 }
             }
             return true;
         } else {
+            SdkLog.i(TAG, "Yieldlab elements list is empty - nothing to append");
             return false;
         }
     }
