@@ -35,6 +35,7 @@ import de.guj.ems.mobile.sdk.controllers.IOnAdResizeListener;
 import de.guj.ems.mobile.sdk.controllers.IOnAdSuccessListener;
 import de.guj.ems.mobile.sdk.controllers.adserver.DFPSettingsAdapter;
 import de.guj.ems.mobile.sdk.controllers.adserver.IAdServerSettingsAdapter;
+import de.guj.ems.mobile.sdk.util.Emetriq;
 import de.guj.ems.mobile.sdk.util.SdkLog;
 import de.guj.ems.mobile.sdk.util.SdkUtil;
 
@@ -409,6 +410,7 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
 
     public void setContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
+        Emetriq.getInstance().setContentUrl(contentUrl);
     }
 
     private void setAdSizes() {
