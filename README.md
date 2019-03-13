@@ -1,6 +1,6 @@
 ﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.3.2**
+**Latest Version 2.3.1**
 
 ## Requirements
 
@@ -10,8 +10,13 @@ Language Support: **Java**
 
 ## Changelog
 
-- Emetriq
-tall
+- YieldLab Banner Ad Integration
+
+## New Features since 2.1.91
+
+- Smartclip removed
+- setNonPersonalizedAdsStatus
+
 ## Installation
 
 The SDK is available as a maven library over jcenter.
