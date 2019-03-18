@@ -135,6 +135,7 @@ public class BannerFragment extends Fragment {
                 gujView.getSettings().addCustomRequestParameter("kw", kw);
             }
             gujView.setAdUnitId(adUnitId, position);
+            gujView.setMobileHalfpageAd(true);
             this.disableSizes(gujView, position);
             String cUrl = util.getStringSettingByKey(GlobalData.preferenceContentUrl + position);
             if (!cUrl.equals("")) {

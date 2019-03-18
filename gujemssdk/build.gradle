@@ -20,7 +20,6 @@ android {
 dependencies {
     compile 'com.google.ads.interactivemedia.v3:interactivemedia:3.5.2'
     compile 'com.google.android.gms:play-services-ads:11.0.2'
-    compile files('src/main/assets/libs/omsdk-android-1.2.4-Emsgujde.jar')
 }
 
 apply from: 'install.gradle'

@@ -1,6 +1,6 @@
 ﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.3.2**
+**Latest Version 2.3.4**
 
 ## Requirements
 
@@ -10,8 +10,12 @@ Language Support: **Java**
 
 ## Changelog
 
-- Emetriq
-tall
+**2.3.4 | 18/Mar/2019
+- emetriq fix
+**2.3.3 | 18/Mar/2019
+- Support for "Mobile Halfpage Ad" added
+
+
 ## Installation
 
 The SDK is available as a maven library over jcenter.
@@ -175,6 +179,15 @@ a new view(app-page) is creaed.
 
 ````java
 YieldLab.request();
+````
+
+### Mobile Halfpage Ad
+
+To activate "mobile halfpage ad", just call the method "setMobileHalfpageAd" on GuJEMSAdView.
+
+````java
+GuJEMSAdView gujView = new GuJEMSAdView(getActivity(), null, false);
+gujView.setMobileHalfpageAd(true);
 ````
 
 ### Interstitial Ad
