@@ -2,10 +2,10 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 18
         targetSdkVersion 26
     }
 
@@ -18,8 +18,11 @@ android {
 }
 
 dependencies {
-    compile 'com.google.ads.interactivemedia.v3:interactivemedia:3.5.2'
-    compile 'com.google.android.gms:play-services-ads:11.0.2'
+    implementation 'com.google.ads.interactivemedia.v3:interactivemedia:3.5.2'
+    implementation 'com.google.android.gms:play-services-ads:10.0.1'
+    implementation files('src/main/assets/libs/omsdk-android-1.2.4-Emsgujde.jar')
+    //implementation 'com.google.guava:guava:20.0'
+    implementation 'com.sourcepoint.cmplibrary:cmplibrary:2.0.3'
 }
 
 apply from: 'install.gradle'

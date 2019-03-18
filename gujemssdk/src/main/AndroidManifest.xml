@@ -10,8 +10,7 @@
     <!-- The G+J e|MS Android SDK requires Android 2.2 (FROYO) or later and has been tested with Android 6.0 Marshmallow -->
     <uses-sdk
         android:minSdkVersion="19"
-        android:targetSdkVersion="23"
-        tools:overrideLibrary="com.google.android.gms" />/>
+        tools:overrideLibrary="com.google.android.gms" />
 
     <!-- *** Required permissions *** -->
     <uses-permission android:name="android.permission.INTERNET" />

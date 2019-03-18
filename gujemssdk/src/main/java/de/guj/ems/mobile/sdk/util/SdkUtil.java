@@ -82,7 +82,7 @@ public class SdkUtil {
     /**
      * revision sdk version integer
      */
-    private final static int REV_VERSION = 3;
+    private final static int REV_VERSION = 1;
 
     private final static String TAG = "SdkUtil";
 
@@ -96,6 +96,18 @@ public class SdkUtil {
             + MINOR_VERSION + "_" + REV_VERSION;
 
     private static WindowManager WINDOW_MANAGER = null;
+
+    public static boolean getUseDebuggingAdSize() {
+        return USE_DEBUGGING_AD_SIZE;
+    }
+
+    public static void setUseDebuggingAdSize(boolean useDebuggingAdSize) {
+        USE_DEBUGGING_AD_SIZE = useDebuggingAdSize;
+    }
+
+    private static void initOmidSdk(Context context) {
+        OmidSdk.getInstance().init(context);
+    }
 
     public static void setNonPersonalizedAdsStatus(boolean status, boolean isChild) {
         NPA_STATUS = status;

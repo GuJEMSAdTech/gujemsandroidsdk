@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "de.guj.ems.exampleapp"
-        targetSdkVersion 25
+        targetSdkVersion 26
         minSdkVersion 18
     }
 
@@ -19,8 +19,8 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:design:25.2.0'
-    compile 'com.android.support:support-v4:26.1.0'
-    compile 'com.facebook.android:audience-network-sdk:4.+'
-    compile project(':gujemssdk')
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.facebook.android:audience-network-sdk:4.+'
+    implementation project(':gujemssdk')
 }

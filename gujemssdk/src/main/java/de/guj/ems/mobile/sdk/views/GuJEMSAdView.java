@@ -16,6 +16,7 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.doubleclick.AppEventListener;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest.Builder;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
+import com.iab.omid.library.emsgujde.adsession.AdSession;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -47,6 +48,7 @@ import de.guj.ems.mobile.sdk.util.SdkUtil;
 public class GuJEMSAdView extends LinearLayout implements AppEventListener {
 
     private PublisherAdView adView;
+    private AdSession adSession;
 
     private IAdServerSettingsAdapter settings;
 
@@ -63,7 +65,6 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
     private boolean disallowLeaderboard = false;
     private boolean disallowTwoToOne = false;
     private boolean disallowThreeToOne = false;
-    private boolean enableMobileHalfpageAd = false;
     private String contentUrl = "";
 
     /**
@@ -235,6 +236,14 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
         }
     }
 
+    public void setAdSession(AdSession adSession) {
+        this.adSession = adSession;
+    }
+
+    public AdSession getAdSession() {
+        return this.adSession;
+    }
+
     public ViewGroup.LayoutParams getNewLayoutParams(int w, int h) {
         return new ViewGroup.LayoutParams(w, h);
     }
@@ -374,11 +383,6 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
         this.setAdSizes();
     }
 
-    public void setMobileHalfpageAd(Boolean enabled) {
-        this.enableMobileHalfpageAd = enabled;
-        this.setAdSizes();
-    }
-
     public void setNoThreeToOne(Boolean rS) {
         this.disallowThreeToOne = rS;
         this.setAdSizes();
@@ -406,7 +410,8 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
 
     public void setContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
-        Emetriq.getInstance().setContentUrl(contentUrl);
+        Emetriq emetriq = new Emetriq();
+        emetriq.setContentUrl(contentUrl);
     }
 
     private void setAdSizes() {
@@ -414,7 +419,7 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
             AdSize[] adSizes = {AdSize.BANNER, new AdSize(768, 90),
                     new AdSize(728, 90), new AdSize(768, 300),
                     new AdSize(1024, 220), new AdSize(800, 250),
-                    new AdSize(300, 250), new AdSize(1, 1), new AdSize(300,600)};
+                    new AdSize(300, 250), new AdSize(1, 1)};
             if (((DFPSettingsAdapter) this.settings).isNoRectangle() || this.disallowRectangle) {
                 SdkLog.d(TAG, settings.hashCode() + " removing accepted size: 300x250");
                 adSizes[6] = new AdSize(1, 1);
@@ -435,11 +440,12 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
                         + " removing accepted sizes: 728x90, 768x90");
                 adSizes[2] = adSizes[1] = new AdSize(1, 1);
             }
-
-            if (!this.enableMobileHalfpageAd) {
-                adSizes[8] = new AdSize(1,1);
+            if (SdkUtil.getUseDebuggingAdSize()) {
+                ArrayList<AdSize> list = new ArrayList<AdSize>();
+                list.addAll(Arrays.asList(adSizes));
+                list.add(new AdSize(200, 446));
+                adSizes = list.toArray(new AdSize[list.size()]);
             }
-
             adView.setAdSizes(adSizes);
         } else {
             AdSize[] adSizes = {AdSize.BANNER, //0
@@ -461,8 +467,7 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
                     new AdSize(320, 250),//14
                     new AdSize(320, 320), //15
                     new AdSize(320, 416),//16
-                    new AdSize(300, 100),//17,
-                    new AdSize(300,600) // 18
+                    new AdSize(300, 100)//17
 
             };
             if (((DFPSettingsAdapter) this.settings).isNoTwoToOne() || this.disallowTwoToOne) {
@@ -490,11 +495,12 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
                         + " removing accepted sizes: 728x90, 768x90");
                 adSizes[4] = adSizes[5] = new AdSize(1, 1);
             }
-
-            if (!this.enableMobileHalfpageAd) {
-                adSizes[20] = new AdSize(1,1);
+            if (SdkUtil.getUseDebuggingAdSize()) {
+                ArrayList<AdSize> list = new ArrayList<AdSize>();
+                list.addAll(Arrays.asList(adSizes));
+                list.add(new AdSize(200, 446));
+                adSizes = list.toArray(new AdSize[list.size()]);
             }
-
             adView.setAdSizes(adSizes);
         }
     }

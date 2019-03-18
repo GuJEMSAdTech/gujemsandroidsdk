@@ -2,21 +2,12 @@ package de.guj.ems.mobile.sdk.util;
 
 public class Emetriq extends HttpConnectionTask implements AndroidIdRetrieverRequester {
 
-    private static Emetriq instance = null;
-
     private String idfa = "";
     private AndroidIdRetriever retriever = null;
     private String contentUrl = "";
     private String appId = "";
 
-    public static Emetriq getInstance() {
-        if (instance == null) {
-            instance = new Emetriq();
-        }
-        return instance;
-    }
-
-    Emetriq() {
+    public Emetriq() {
         appId = SdkUtil.getAppPackageName();
         retriever = AndroidIdRetriever.getInstance();
         retriever.execute();

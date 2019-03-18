@@ -2,6 +2,7 @@ package de.guj.ems.test.app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import java.util.HashMap;
 
 import de.guj.ems.mobile.sdk.util.SdkUtil;
+import de.guj.ems.mobile.sdk.util.SourcePointCMP;
 import de.guj.ems.mobile.sdk.util.YieldLab;
 import de.guj.ems.test.app.view.FixedTabsPagerAdapter;
 import de.guj.ems.test.app.view.SlidingTabLayout;
@@ -45,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
             tabLayout.setViewPager(viewPager);
         }
 
+        SourcePointCMP cmp = new SourcePointCMP(
+            this,
+            PreferenceManager.getDefaultSharedPreferences(this),
+            true,
+            false);
+        cmp.initConsent();
     }
 
     @Override
