@@ -1,6 +1,6 @@
 ﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.3.1**
+**Latest Version 2.3.3**
 
 ## Requirements
 
@@ -10,12 +10,9 @@ Language Support: **Java**
 
 ## Changelog
 
-- YieldLab Banner Ad Integration
+**2.3.3 | 18/Mar/2019
+- Support for "Mobile Halfpage Ad" added
 
-## New Features since 2.1.91
-
-- Smartclip removed
-- setNonPersonalizedAdsStatus
 
 ## Installation
 
@@ -180,6 +177,15 @@ a new view(app-page) is creaed.
 
 ````java
 YieldLab.request();
+````
+
+### Mobile Halfpage Ad
+
+To activate "mobile halfpage ad", just call the method "setMobileHalfpageAd" on GuJEMSAdView.
+
+````java
+GuJEMSAdView gujView = new GuJEMSAdView(getActivity(), null, false);
+gujView.setMobileHalfpageAd(true);
 ````
 
 ### Interstitial Ad
