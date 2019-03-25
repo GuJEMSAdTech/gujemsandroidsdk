@@ -47,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
             tabLayout.setViewPager(viewPager);
         }
 
-        SourcePointCMP cmp = new SourcePointCMP(
-            this,
-            PreferenceManager.getDefaultSharedPreferences(this),
-            true,
-            false);
-        cmp.initConsent();
+        SourcePointCMP cmp = SourcePointCMP.getInstance();
+        cmp.initConsent(
+                this,
+                PreferenceManager.getDefaultSharedPreferences(this),
+                true,
+                false);
     }
 
     @Override
