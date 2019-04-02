@@ -26,10 +26,11 @@ public class MainActivity extends AppCompatActivity {
         util.init(this);
         SdkUtil.setContext(getApplicationContext());
         HashMap<String, String> ylMap = new HashMap<String, String>();
-        ylMap.put("mpa", "7509781");
-        ylMap.put("msa", "7509784");
-        ylMap.put("mca", "7509790");
-        ylMap.put("mda", "7509787");
+        ylMap.put("bmca", "5336948");
+        ylMap.put("mca", "5336949");
+        ylMap.put("dmca", "5336950");
+        ylMap.put("moop", "5336951");
+        ylMap.put("mmr", "5336952");
         YieldLab.init(ylMap, 4);
         setContentView(R.layout.activity_main);
 

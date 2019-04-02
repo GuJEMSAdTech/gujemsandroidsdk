@@ -10,6 +10,7 @@
     <string name="ems_noRectangle">noRectangle</string>
     <string name="ems_noBillboard">noBillboard</string>
     <string name="ems_noTwoToOne">noTwoToOne</string>
+    <string name="ems_allowMobileHalfpage">allowMobileHalfpage</string>
     <string name="ems_noDesktopBillboard">noDesktopBillboard</string>
     <string name="ems_noThreeToOne">noThreeToOne</string>
     <string name="ems_noLeaderboard">noLeaderboard</string>

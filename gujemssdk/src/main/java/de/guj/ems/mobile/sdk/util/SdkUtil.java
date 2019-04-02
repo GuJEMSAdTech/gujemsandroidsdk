@@ -82,7 +82,7 @@ public class SdkUtil {
     /**
      * revision sdk version integer
      */
-    private final static int REV_VERSION = 3;
+    private final static int REV_VERSION = 5;
 
     private final static String TAG = "SdkUtil";
 

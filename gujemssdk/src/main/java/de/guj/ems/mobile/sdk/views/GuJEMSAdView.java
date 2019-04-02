@@ -437,7 +437,8 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
                 adSizes[2] = adSizes[1] = new AdSize(1, 1);
             }
 
-            if (!this.enableMobileHalfpageAd) {
+            if (!((DFPSettingsAdapter) this.settings).isAllowMobileHalfpage() ||
+                    !this.enableMobileHalfpageAd) {
                 adSizes[8] = new AdSize(1,1);
             }
 
@@ -492,7 +493,7 @@ public class GuJEMSAdView extends LinearLayout implements AppEventListener {
                 adSizes[4] = adSizes[5] = new AdSize(1, 1);
             }
 
-            if (!this.enableMobileHalfpageAd) {
+            if (!((DFPSettingsAdapter) this.settings).isAllowMobileHalfpage() ||!this.enableMobileHalfpageAd) {
                 adSizes[20] = new AdSize(1,1);
             }
 

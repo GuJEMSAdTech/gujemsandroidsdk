@@ -17,6 +17,7 @@
     <attr name="ems_noDesktopBillboard" format="boolean" />
     <attr name="ems_noLeaderboard" format="boolean" />
     <attr name="ems_noTwoToOne" format="boolean" />
+    <attr name="ems_allowMobileHalfpage" format="boolean" />
     <attr name="ems_noThreeToOne" format="boolean" />
 
     <!-- attribute usage for default web view -->
@@ -36,6 +37,7 @@
         <attr name="ems_noLeaderboard" />
         <attr name="ems_noTwoToOne" />
         <attr name="ems_noThreeToOne" />
+        <attr name="ems_allowMobileHalfpage" />
     </declare-styleable>
 
     <!-- attribute usage for video player -->

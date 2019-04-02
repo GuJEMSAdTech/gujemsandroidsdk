@@ -68,6 +68,8 @@ public class DFPSettingsAdapter extends AdServerSettingsAdapter {
 
     private boolean noThreeToOne = false;
 
+    private boolean allowMobileHalfpage = false;
+
     public DFPSettingsAdapter() {
         super();
     }
@@ -267,6 +269,9 @@ public class DFPSettingsAdapter extends AdServerSettingsAdapter {
         this.noRectangle = getAttrsToParams().get(SdkGlobals.EMS_NO_RECTANGLE) != null
                 && tVals.getBoolean(R.styleable.GuJEMSAdView_ems_noRectangle,
                 false);
+        this.allowMobileHalfpage = getAttrsToParams().get(SdkGlobals.EMS_ALLOW_MOBILE_HALFPAGE) != null
+                && tVals.getBoolean(R.styleable.GuJEMSAdView_ems_allowMobileHalfpage,
+                false);
 
         tVals.recycle();
     }
@@ -328,6 +333,9 @@ public class DFPSettingsAdapter extends AdServerSettingsAdapter {
         this.noRectangle = getAttrsToParams().get(SdkGlobals.EMS_NO_RECTANGLE) != null
                 && savedInstance.getBoolean(SdkGlobals.EMS_ATTRIBUTE_PREFIX
                 + SdkGlobals.EMS_NO_RECTANGLE, false);
+        this.allowMobileHalfpage = getAttrsToParams().get(SdkGlobals.EMS_ALLOW_MOBILE_HALFPAGE) != null
+                && savedInstance.getBoolean(SdkGlobals.EMS_ATTRIBUTE_PREFIX
+                + SdkGlobals.EMS_ALLOW_MOBILE_HALFPAGE, false);
     }
 
     public void setEmsZoneId(String zone) {
@@ -386,6 +394,9 @@ public class DFPSettingsAdapter extends AdServerSettingsAdapter {
         this.noRectangle = getAttrsToParams().get(SdkGlobals.EMS_NO_RECTANGLE) != null
                 && savedInstance.getBoolean(SdkGlobals.EMS_ATTRIBUTE_PREFIX
                 + SdkGlobals.EMS_NO_RECTANGLE, false);
+        this.allowMobileHalfpage = getAttrsToParams().get(SdkGlobals.EMS_ALLOW_MOBILE_HALFPAGE) != null
+                && savedInstance.getBoolean(SdkGlobals.EMS_ATTRIBUTE_PREFIX
+                + SdkGlobals.EMS_ALLOW_MOBILE_HALFPAGE, false);
     }
 
     /**
@@ -485,6 +496,22 @@ public class DFPSettingsAdapter extends AdServerSettingsAdapter {
      */
     public boolean isNoThreeToOne() {
         return noThreeToOne;
+    }
+
+    /**
+     * is Mobile HPA allowed?
+     * @return true / false
+     */
+    public boolean isAllowMobileHalfpage() {
+        return allowMobileHalfpage;
+    }
+
+    /**
+     * set status for allowMobileHPA
+     * @param allowMobileHalfpage true if allowed
+     */
+    public void setAllowMobileHalfpage(boolean allowMobileHalfpage) {
+        this.allowMobileHalfpage = allowMobileHalfpage;
     }
 
     /**

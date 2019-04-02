@@ -115,6 +115,11 @@ public class SdkGlobals {
     public final static String EMS_NO_TWO_TO_ONE = SdkUtil.getContext().getString(R.string.ems_noTwoToOne);
 
     /**
+     * Global attribute name for enable mobile halfpage
+     */
+    public final static String EMS_ALLOW_MOBILE_HALFPAGE = SdkUtil.getContext().getString(R.string.ems_allowMobileHalfpage);
+
+    /**
      * Global attribute name for disabling 3:1
      */
     public final static String EMS_NO_THREE_TO_ONE = SdkUtil.getContext().getString(R.string.ems_noThreeToOne);

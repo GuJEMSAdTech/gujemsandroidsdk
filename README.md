@@ -1,6 +1,6 @@
 ﻿﻿# gujemsandroidsdk
 
-**Latest Version 2.3.4**
+**Latest Version 2.3.5**
 
 ## Requirements
 
@@ -10,9 +10,10 @@ Language Support: **Java**
 
 ## Changelog
 
+**2.3.5 | 02/April/2019
+- Support for "Mobile Halfpage Ad" in layout added
+
 **2.3.4 | 18/Mar/2019
-- emetriq fix
-**2.3.3 | 18/Mar/2019
 - Support for "Mobile Halfpage Ad" added
 
 
@@ -302,6 +303,7 @@ By default the GuJEMSAdViews accept all feasible ad sizes. You can block large a
 	ems:ems_noDesktopBillboard="true" <!-- blocks 800x250 ads on tablets -->
 	ems:ems_noLeaderboard="true" <!-- blocks 728x90 and 768x90 ads on both smartphones and tables -->
 	ems:ems_noTwoToOne="true" <!-- blocks 300x150 ads on smartphones -->
+	ems:ems_allowMobileHalfpage="true" <!-- allows 300x600 ads on smartphones -->
 ```
 - Programmatically supressing them
 ```java
@@ -310,6 +312,7 @@ By default the GuJEMSAdViews accept all feasible ad sizes. You can block large a
 	GuJEMSAdView.setNoDesktopBillboard(true)
 	GuJEMSAdView.setNoLeaderboard(true)
 	GuJEMSAdView.setNoTwoToOne(true)
+	GuJEMSAdView.setMobileHalfpageAd(true)
 ```
 #### "as" parameter as custom value
 
