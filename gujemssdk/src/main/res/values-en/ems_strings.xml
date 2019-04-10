@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="ems_loading">Loading&#8230;</string>
-    <string name="ems_close">Close</string>
-    <string name="ems_sound">Sound on/off</string>
-    <string name="ems_native_ad_marker">Ad</string>
-</resources>
